@@ -3,6 +3,6 @@ public class Nimsys
 {
     public static void main(String[] args) 
     {
-        
+        String s = new String();
     }
 }
