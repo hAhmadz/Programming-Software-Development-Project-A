@@ -29,11 +29,11 @@ public class NimPlayer
         this.playerName = playerName;
     }
 
-    public void removeStone()
-    {
-        
-        //return stones;
-    }
+//    public int removeStone()
+//    {
+//        
+//        return stones;
+//    }
     
     // *** End Functions ***
 
