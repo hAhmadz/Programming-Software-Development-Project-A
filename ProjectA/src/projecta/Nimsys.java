@@ -15,28 +15,33 @@ public class Nimsys
         NimPlayer player2;
         String winner = "";
         
-        System.out.println("Welcome to Nim");
-        System.out.println("Please enter Player 1's name");
+        System.out.println("Welcome to Nim\n");
+        System.out.println("Please enter Player 1's name:");
         player1 = new NimPlayer(scan.next());
-        System.out.println("Please enter Player 2's name");
+        System.out.print("\n");
+        System.out.println("Please enter Player 2's name:");
         player2 = new NimPlayer(scan.next());
+        
         
         while(gameCheck)
         {
-            System.out.println("Please enter upper bound of stone removal");
+            System.out.print("\n");
+            System.out.println("Please enter upper bound of stone removal:");
             upperBound = scan.nextInt();
-            System.out.println("Please enter initial number of stones");
+            System.out.print("\n");
+            System.out.println("Please enter initial number of stones:");
             stones = scan.nextInt();
+            System.out.print("\n");
             
             //Main game Loop
             while(stones !=0)
             {
-                System.out.print(stones + " stones left: ");
+                System.out.print(stones + " stones left:");
                 for(int i=0;i<stones;i++)
-                    System.out.print('*');
+                    System.out.print(" *");
 
-                System.out.println(); //blank line
-                System.out.println(player1.getPlayerName() + "'s turn - remove how many?");
+                System.out.print("\n"); //blank line
+                System.out.println(player1.getPlayerName() + "'s turn - remove how many?\n");
                 turnInput = scan.nextInt();
                 stones = stones - turnInput; 
                 
@@ -45,12 +50,12 @@ public class Nimsys
                 
                 if (stones !=0)
                 {
-                    System.out.print(stones + " stones left: ");
+                    System.out.print(stones + " stones left:");
                     for(int i=0;i<stones;i++)
-                        System.out.print('*');
+                        System.out.print(" *");
 
-                    System.out.println(); //blank line
-                    System.out.println(player2.getPlayerName() + "'s turn - remove how many?");
+                    System.out.print("\n"); //blank line
+                    System.out.println(player2.getPlayerName() + "'s turn - remove how many?\n");
                     turnInput = scan.nextInt();
                     stones = stones - turnInput;
                     if(stones < 1)
@@ -59,8 +64,9 @@ public class Nimsys
             }
 
             System.out.println("Game Over");
-            System.out.println(winner + " Wins"); //player wins
-            System.out.print("Do you want to play again (Y/N): ");
+            System.out.println(winner + " wins!"); //player wins
+            System.out.print("\n");
+            System.out.print("Do you want to play again (Y/N):");
             if(scan.next().toUpperCase().equals("Y"))
                 gameCheck = true;
             else 
