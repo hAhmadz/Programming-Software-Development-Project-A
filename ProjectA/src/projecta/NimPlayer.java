@@ -1,10 +1,11 @@
-//Player Class
+//Player Class handles the player data
 
 package projecta;
+import java.util.Scanner;
+
 public class NimPlayer 
 {
     private String playerName;
-    
     
     // *** constructors ***
     NimPlayer()
@@ -17,27 +18,20 @@ public class NimPlayer
         playerName = name;
     }
     
-    //*** End Constructors ***
-
-    
     // *** Functions ***
-    public String getPlayerName() {
+    public String getPlayerName() 
+    {
         return playerName;
     }
     
-    public void setPlayerName(String playerName) {
+    public void setPlayerName(String playerName) 
+    {
         this.playerName = playerName;
     }
 
-//    public int removeStone()
-//    {
-//        
-//        return stones;
-//    }
-    
-    // *** End Functions ***
-
-    
-
-    
+    public int removeStone(Scanner input)
+    {
+        int removeStones = 0;
+        return removeStones = input.nextInt();
+    }
 }
